@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.bespoke-parent {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+kbd {
+  display: inline-block;
+  margin-bottom: 0.15em;
+  font-size: 0.7em;
+  font-family: monospace;
+  border: 1px solid darkgray;
+  box-shadow: 1px 1px 0px #333, inset 1px 1px 0px #ccc;
+  padding: 0.15em 0.25em;
+}
