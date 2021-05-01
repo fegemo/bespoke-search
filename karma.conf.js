@@ -1,45 +1,46 @@
-module.exports = function(config) {
+const puppeteer = require('puppeteer')
+
+process.env.CHROME_BIN = puppeteer.executablePath()
+
+module.exports = function (config) {
   config.set({
     basePath: '',
-
     frameworks: ['jasmine', 'browserify'],
-
-    files: [
-      'test/spec/*Spec.js'
-    ],
-
+    files: ['test/spec/*Spec.js', 'lib/**/*.js'],
     exclude: [],
 
-    preprocessors: {
-      'test/**/*.js': 'browserify'
+    client: {
+      jasmine: {
+        random: false
+      }
     },
 
+    preprocessors: {
+      'test/spec/*.js': 'browserify',
+      'lib/*.js': ['browserify', 'coverage'],
+    },
     browserify: {
-      debug: true,
-      transform: ['babelify']
+      debug: false,
+      basedir: __dirname,
+      transform: [
+        ['browserify-css', { global: true, rootDir: './lib' }],
+      ]
     },
 
     reporters: ['progress', 'coverage'],
 
     coverageReporter: {
-      dir : 'test/coverage',
-      reporters: [
-        { type : 'lcov', subdir: 'report-lcov' },
-        { type : 'html', subdir: 'report-html' }
-      ],
+      type: 'lcov',
+      dir: 'test/coverage',
       instrumenterOptions: {
-        istanbul: { noCompact: true }
-      }
+        istanbul: { noCompact: true },
+      },
     },
 
-    port: 8080,
-
+    port: 9090,
     logLevel: config.LOG_INFO,
-
     autoWatch: false,
-
-    browsers: ['PhantomJS'],
-
+    browsers: ['ChromeHeadless'],
     singleRun: true
-  });
-};
+  })
+}

@@ -1,45 +1,27 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>bespoke-search demo</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-
-<article>
-    <section>
-        <h1>Hobbit Meals</h1>
-        <ul>
-            <li><span>7:00am - Breakfast</span></li>
-            <li><span>9:00am - Second Breakfast</span></li>
-            <li><span>11:00am - Elevenses</span></li>
-            <li><span>1:00pm - Luncheon</span></li>
-            <li><span>4:00pm - Afternoon Tea</span></li>
-            <li><span>6:00pm - Dinner</span></li>
-            <li><span>8:00pm - Supper&nbsp;</span></li>
-        </ul>
-    </section>
-    <section>
-        <p>Slide 2</p>
-    </section>
-    <section>
-        <p>Slide 3</p>
-    </section>
-    <section>
-        <p>Slide 4 - a</p>
-    </section>
-    <section>
-        <p>Slide 5</p>
-    </section>
-</article>
-
-<script src="../node_modules/bespoke/dist/bespoke.js"></script>
-<script src="../node_modules/bespoke-keys/dist/bespoke-keys.js"></script>
-<script src="../node_modules/bespoke-touch/dist/bespoke-touch.js"></script>
-<script src="../node_modules/bespoke-classes/dist/bespoke-classes.js"></script>
-<script src="../dist/bespoke-search.js"></script>
-<script src="demo.js"></script>
+<body>    
+    <article class="cube">
+        <section>
+            <h1>bespoke-search</h1>
+            <h2>Allows <kbd>Ctrl-F</kbd>ing in <a href="https://markdalgleish.com/projects/bespoke.js/" target="_blank">bespoke</a> presentations.</h2>
+        </section>
+        <section>
+            <p>It works with <a href="https://www.npmjs.com/package/bespoke-bullets" target="_blank">bespoke-bullets</a> too, if you provide proper styling.</p>
+            <p>Try searching for "bull":</p>
+            <ul class="bulleted">
+                <li>Bullet 1</li>
+                <li>Bullet 2</li>
+                <li>Bullet 3</li>
+            </ul>
+        </section>
+    </article>
+    <script src="demo.bundled.js"></script>
 </body>
 </html>
