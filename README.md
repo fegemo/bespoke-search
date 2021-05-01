@@ -94,7 +94,7 @@ The plugin adds to the `deck.parent` the following structure of HTML elements:
 
 See [lib/bespoke-search.css][search-css] if you want to create all the styling yourself (using `insertStyles: false`) or if you need to override just part of it.
 
-[search-css]: tree/master/lib/bespoke-search.css
+[search-css]: lib/bespoke-search.css
 
 
 ## Package managers
